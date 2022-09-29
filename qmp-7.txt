@@ -1,0 +1,54 @@
+GET: guararropa/{id_guardarropa}/prendas
+RES:{
+	“nombre_guardarropas”: “guardarropa principal”,
+	“prendas”:[
+				{
+					“tipo”: Pantalon,
+					“tela”: Algodon,
+					“color”:  Rojo 
+				},
+				{
+					“tipo”: Remera,
+					“tela”: Seda,
+					“color”:  Verde 
+				},
+	]
+}
+
+POST: /prendas —— 201 CREATED, 400 BAD_REQUEST
+BODY: {
+	“tipo”: Pantalon,
+	“tela”: Algodon,
+	“color”:  Rojo 
+}
+
+GET: /prendas/{id_prenda} 200 OK, 404 NOT_FOUND
+RES:{
+	“tipo”: Pantalon,
+	“tela”: Algodon,
+	“color”:  Rojo 
+}
+
+PUT: /prendas/{id_prenda} 200 OK, 404 NOT_FOUND
+BODY: {
+	“tela”: Cuero,
+}
+RES:{
+	“tipo”: Pantalon,
+	“tela”:  Cuero,
+	“color”:  Rojo 
+}
+
+DELETE: /prendas/{id_prenda} —— 200 OK, 404 NOT_FOUND
+
+GET: /eventos —— 200 OK, 404 NOT_FOUND
+RES:{
+	“nombre_evento”: Evento lluvia,
+	“fecha”: 10/10/2022
+}
+
+GET: /eventos/{id_evento}/sugerencias —— 200 OK, 404 NOT_FOUND
+RES:{
+	“evento”: “dia soleado”,
+	“sugerencias”: [usar gorra, usar anteojos]
+}
